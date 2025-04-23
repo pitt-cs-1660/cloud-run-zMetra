@@ -120,7 +120,15 @@ async function vote(team) {
       /*
        * ++++ YOUR CODE HERE ++++
        */
-      window.alert(`Not implemented yet!`);
+      const response = await fetch("/",{
+        method:"POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": "Bearer ${token}"
+        },
+        body: new URLSearchParams({team: team, Bearer:token})
+      });
+      //window.alert(`Not implemented yet!`);
 
     } catch (err) {
       console.log(`Error when submitting vote: ${err}`);
