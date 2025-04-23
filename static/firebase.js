@@ -128,6 +128,11 @@ async function vote(team) {
         },
         body: new URLSearchParams({team: team, Bearer:token})
       });
+      // if(response.ok){
+      //   window.location.reload();
+      // }
+      //window.location.reload();
+      
       //window.alert(`Not implemented yet!`);
 
     } catch (err) {
@@ -137,4 +142,6 @@ async function vote(team) {
   } else {
     window.alert('User not signed in.');
   }
+  
+  //window.location.reload();
 }

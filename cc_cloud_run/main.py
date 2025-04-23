@@ -41,7 +41,7 @@ async def read_root(request: Request):
         "request": request,
         "tabs_count": tabs,
         "spaces_count": spaces,
-        "recent_votes": []
+        "recent_votes": vote_data
     })
 
 
