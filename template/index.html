@@ -53,11 +53,23 @@
     </ul>
   </div>
   <script>
+    async function voteWithUpdate(value){
+      await vote(value);
+      window.location.reload();
+    }
     document.addEventListener("DOMContentLoaded", function() {
-      <!-- add Event Listener "click" to the vote -->
-      // document.getElementById("voteTabs").addEventListener("click", function () {
-      //   vote("TABS");
-      // });
+      //<!-- add Event Listener "click" to the vote -->
+      document.getElementById("voteTabs").addEventListener("click", function () {
+        voteWithUpdate("TABS");
+        //window.location.reload();
+      });
+      document.getElementById("signInButton").addEventListener("click", function () {
+        toggle();
+      });
+      document.getElementById("voteSpaces").addEventListener("click", function () {
+        voteWithUpdate("SPACES");
+        //window.location.reload();
+      });
     })
   </script>
 </body>
